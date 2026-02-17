@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Super Kina - Personal & Business Loans</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <!-- Logo -->
+        <a href="#home" class="logo">
+            <img src="images/logo.png.png" alt="Super Kina Logo">
+        </a>
+        <!-- Hamburger menu for mobile -->
+<div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+
+        <!-- Navigation Menu -->
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Loans</a></li>
+            <li><a href="#calculator">Calculator</a></li>
+            <li><a href="#contact">Apply Now</a></li>
+        </ul>
+        <div class="social-icons">
+    <a href="https://www.facebook.com/share/1F7TCGAtVK/" target="_blank">
+        <i class="fa-brands fa-facebook"></i>
+    </a>
+</div>
+
+    </nav>
+
+    <!-- Hero -->
+    <div class="hero" id="home">
+        <h1>Fast & Reliable Loans for Every Need</h1>
+        <p>Helping you achieve your personal and business goals with flexible financial solutions.</p>
+      
+        <canvas id="heroCanvas"></canvas>
+    </div>
+</header>
+
+
+<main>
+    <!-- Services -->
+    <section id="services">
+        <h2>Our Loan Services</h2>
+        <div class="service-container">
+            <div class="service" data-modal="modal-personal">
+                <i class="fa-solid fa-user fa-3x"></i>
+                <h3>Personal Loans</h3>
+                <p>Quick approval for personal needs, education, or emergencies.</p>
+                <button class="modal-btn" data-modal="modal-personal">Learn More</button>
+            </div>
+            <div class="service" data-modal="modal-business">
+                <i class="fa-solid fa-briefcase fa-3x"></i>
+                <h3>Business Loans</h3>
+                <p>Support your business growth with tailored financing options.</p>
+                <button class="modal-btn" data-modal="modal-business">Learn More</button>
+            </div>
+            <div class="service" data-modal="modal-emergency">
+                <i class="fa-solid fa-triangle-exclamation fa-3x"></i>
+                <h3>Emergency Loans</h3>
+                <p>Immediate assistance for urgent financial needs.</p>
+                <button class="modal-btn" data-modal="modal-emergency">Learn More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Loan Calculator -->
+    <section id="calculator">
+        <h2>Loan Calculator</h2>
+        <div class="calc-container">
+            <label>Loan Amount (Kina): <input type="number" id="amount" placeholder="1000"></label>
+            <label>Interest Rate (% per year): <input type="number" id="rate" placeholder="10"></label>
+            <label>Term (months): <input type="number" id="term" placeholder="12"></label>
+            <button id="calculateBtn" class="btn">Calculate</button>
+            <p id="calcResult"></p>
+        </div>
+    </section>
+
+    <!-- Loan Application Form -->
+    <section id="contact">
+        <h2>Loan Application</h2>
+        <form id="loanForm">
+            <input type="text" placeholder="Full Name" name="name" required>
+            <input type="email" placeholder="Email Address" name="email" required>
+            <input type="text" placeholder="Phone Number" name="phone" required>
+            <select name="loanType" required>
+                <option value="">Select Loan Type</option>
+                <option value="personal">Personal Loan</option>
+                <option value="business">Business Loan</option>
+                <option value="emergency">Emergency Loan</option>
+            </select>
+            <input type="number" placeholder="Amount Requested (Kina)" name="amount" required>
+            <input type="number" placeholder="Term (Months)" name="term" required>
+            <button type="submit" class="btn">Submit Application</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>© 2026 Super Kina | All Rights Reserved</p>
+</footer>
+
+<!-- Modals -->
+<div id="modal-personal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Personal Loans</h3>
+        <p>Flexible personal loans with quick approval for education, emergencies, or lifestyle needs.</p>
+    </div>
+</div>
+<div id="modal-business" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Business Loans</h3>
+        <p>Customized solutions to help your business expand with competitive interest rates.</p>
+    </div>
+</div>
+<div id="modal-emergency" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Emergency Loans</h3>
+        <p>Fast cash loans for urgent situations, accessible to approved applicants immediately.</p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
